@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39283436-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<title>iFilter | Advanced Photo Effects</title>
+<link rel="stylesheet" href="Styles/jquery-ui.css" type="text/css" />
+<link rel="stylesheet" href="Styles/jquery.fancybox.css" type="text/css" />
+<link rel="stylesheet" href="Styles/styles.css" type="text/css" />
+<script src="Scripts/jquery.min.js"></script>
+<script src="Scripts/jquery-ui.min.js"></script>
+<script src="Scripts/jquery.browse.js"></script>
+<script src="Scripts/jquery.fancybox.pack.js"></script>
+<script src="Scripts/modernizr.js"></script><!--MODERNIZR-->
+<script src="Scripts/iFilter.js"></script>
+<script src="Scripts/main.js"></script>
+<meta name="author" content="Ryan Davis" />
+<meta name="description" content="iFilter is a JavaScript plugin that allows developers to create advanced, beautiful visual effects on photos with javascript." />
+<meta name="keywords" content="JavaScript. JavaScript Plugins. Photo Effects. Photo. Photo Filter. Filter" />
+</head>
+<body>
+<div id="wrapper">
+<div id="tabs">
+<ul>
+<li><a href="#home">Home</a></li>
+</ul>
+</div>
+<div id="editor">
+<center>
+<div id="toolbar" class="">
+<button id="editor-open">Open</button>
+<a id="editor-save" href="" download="iFilter-photo.png" title="Save This Photo with all it's changes">Save</a>
+<button id="editor-greyscale">Greyscale</button>
+<button id="editor-invert">Negative</button>
+<button id="editor-sepia">Sepia</button>
+<button id="editor-saturate">Saturate</button>
+<button id="editor-pixelate">Pixelate</button>
+</div>
+</center>
+<div id="display">
+<span id="preview-container">
+<div title="Close" class="preview-close"></div>
+<img src="http://litc.org/wp-content/uploads/2013/01/default.gif" id="editor-preview" title="You can select your own image to edit, with the 'Open' button above!"/>
+</span>
+</div>
+
+</div>
+</div>
+<div id="dialog-photos" title="iFilter.js Demo">
+<center><h1>Effects</h1></center>
+</div>
+
+<div id="dialog-sepia" title="Sepia Options">
+<h3>Which kind of sepia would you like to use?</h3>
+<div class="radio-options">
+<button id="sepia-lazy">Lazy</button>
+<button id="sepia-standard">Standard</button>
+</div>
+
+<div id="dialog-saturate" title="Saturation Options">
+<h3>How much saturation would you like?</h3>
+<center>
+<input type="text" id="saturation-input" class="pretty" />
+<div id="saturation-slider">
+</div>
+
+<div id="dialog-pixelate" title="Pixelation Options">
+<h3>How big would you like the dots to be?</h3>
+<label for="pixel-slider" id="pixel-label">Dot Size: 0</label>
+<input type="hidden" id="pixel-input" class="pretty" />
+<div id="pixel-slider"></div>
+</div>
+
+<div id="dialog-nocanvas" title="Sorry...">
+<p>Sorry, but you won't be able to enjoy this demo right now,
+ because your browser doesn't support the technology used here just yet.
+ At this time, the only browser that supports <strong>all</strong> everything used in this demo is <em><strong>Google Chrome</strong></em>.
+ If you would like to view this demo, I would highly recommend heading over to <a href="https://www.google.com/intl/en/chrome/browser/">Chrome's Download Page</a>, because everything will work
+ on Google Chrome, and will work faster than on any other browser, and I also recommend the download just because Chrome is my personal favorite.
+ </p>
+ </div>
+
+
+</div>
+
+</center>
+
+</div>
+</div>
+
+</body>
+</html>
