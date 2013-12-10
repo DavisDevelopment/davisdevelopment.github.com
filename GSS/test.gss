@@ -1,0 +1,66 @@
+import "module.gss";
+
+body {
+	background: rgb( 230, 230, 230 );
+	font-family: Arial;
+	div#wrapper {
+		background-color: #f9f9f9;
+		blockCenter;
+		myWrapper;
+		
+		h1.main-heading {
+			textCenter;
+			
+			when hovered {
+				color: blue;
+				cursor: pointer;
+				
+				p.fuckMyBabies {
+					cock: large;
+				}
+			}
+		}
+		p.description-paragraph {
+			padding: 15px;
+			line-height: 20px;
+		}
+	}
+}
+
+.gss-example {
+	overflow: hidden;
+	margin: 20px;
+	span.keyword {
+		display: inline;
+		color: blue;
+	}
+	span.comment {
+		display: inline;
+		color: green;
+	}
+}
+
+div.fanceh-button {
+	display: inline;
+	background: #DEDEDE;
+	border: solid #565656 1px;
+	border-radius: 2px;
+	padding: 5px;
+	
+	span {
+		font-weight: bold;
+		color: #666666;
+	}
+	when hovered {
+		background: #EFEFEF;
+		border: solid black 1px;
+		cursor: pointer;
+		
+		span {
+			color: #222222;
+		}
+	}
+	when active {
+		background: white;
+	}
+}

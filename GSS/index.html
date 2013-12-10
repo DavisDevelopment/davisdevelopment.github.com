@@ -1,0 +1,135 @@
+<! doctype html >
+<html>
+	<head>
+		<title> Title </title>
+		<!--<link href="prettyPrint.css" rel="stylesheet" type="text/css" />-->
+		<link href="test.gss" rel="stylesheet" type="text/gss" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<!--<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css"></script>-->
+		<script src="gss.js"></script>
+		<script src="main.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<img width="960px" height="250px" id="main-heading-image" src="logo-banner.svg"></img>
+			<br>
+			<h1 class="main-heading">What is GSS?</h1>
+			<p class="description-paragraph">
+			&nbsp;&nbsp;&nbsp;&nbsp;The goal of GSS is is to bring object-oriented programming paradigms to CSS.  GSS borrows much of it's ideas from
+			<a href="http://lesscss.org/">LESS</a>, but seeks to be more radical.  GSS supports variables, much like LESS, and even uses the same syntax
+			for them as LESS does, and, like LESS, any CSS is valid GSS.  However, the similarities really stop there syntactically.  The principals are the same,
+			but the syntax used for them is a bit different.  GSS supports mixins, through the use of the <span class="keyword">mixin</span> keyword, which can be
+			used as shorthand for one or more property definitions.  They can be parametric, allowing them to behave much like functions, or can inherit properties from 
+			one or more other mixins.  A GSS user can <span class="keyword">import</span> GSS stylesheets into a stylesheet, allowing him to reference variables and mixins
+			declared in the imported file, or you can <span class="keyword">inline</span> your other stylesheets, which just fetches the content of the other file and tosses
+			it right into the file that referenced it.  There are also a list of helper functions that one can use, among them are ones like <span class="keyword">url</span>,
+			<span class="keyword">rgb</span>, and <span class="keyword">mix</span>.  I don't know about you, but vendor prefixes always annoyed the shit out of me. GSS does
+			away with this annoyance.  If you're not sure what vendor prefixes to use, or if you should use any, for a particular property, simply prefix the property name with 
+			the "~" symbol (or as I call it, the "squiggly line").  The GSS->CSS compiler will check whether the given property needs to be prefixed, and if so, will insert that
+			property into the compiled code <em>with</em> all necessary prefixes, and once without any at all.  Here's a small example of some GSS code.
+			</p>
+			<code id="initial-example" class="gss-example">
+//This is a GSS Comment
+/* So is this */
+
+//Variable Definition
+@bodyColor: #FFFFFF;
+
+//mixin
+mixin textCenter {
+	text-align: center;
+}
+//parametric mixin
+mixin bothSides( @type, @color, @width ) {
+	border-right: arguments;
+	border-left: arguments[ 0 -> 3 ];
+	border-right: @type @color @width;
+}
+//Another mixin
+mixin blockCenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+//This mixin declares it's own properties via the use of the 'bothSides' mixin,
+// and 'inherits' properties from blockCenter
+mixin wrapper extends blockCenter {
+	width: 960px;
+	min-height: 600px;
+	bothSides( solid, black, 2px );
+}
+
+body {
+	color: @bodyColor;
+	
+	div#wrapper {
+		wrapper;
+		
+		h1 {
+			color: #666;
+			
+			when hovered {
+				color: black;
+			}
+		}
+	}
+}				
+			</code>
+			<button class="example-runner" for="#initial-example">Compile</button>
+			<p class="description-paragraph">
+				&nbsp;&nbsp;&nbsp;&nbsp;Another interesting feature of GSS is <strong>nested pseudo-classes</strong>, which allows you to nest pseudo-class
+				style groups, via the <span class="keyword">when</span> keyword.  For example, to make an H1 tag look click-able, you would use:
+				<code class="gss-example" id="when-example2">
+body h1.clickme {
+	color: #666666;
+	when hovered {
+		color: black;
+		cursor: pointer;
+	}
+}
+				</code><button class="example-runner" for="#when-example2">Compile</button><br><br>
+				Or, a more in-depth example where you have a div with a span inside, used to make nicer-looking buttons:
+				<div class="fanceh-button"><span>Like This One</span></div>
+				<br>
+				<code id="when-example3" class="gss-example">
+div.fanceh-button {
+	display: inline;
+	background: #DEDEDE;
+	border: solid #565656 1px;
+	border-radius: 2px;
+	padding: 5px;
+	
+	span {
+		font-weight: bold;
+		color: #666666;
+	}
+	when hovered {
+		background: #EFEFEF;
+		border: solid black 1px;
+		cursor: pointer;
+		
+		span {
+			color: #222222;
+		}
+	}
+	when active {
+		background: white;
+	}
+}
+				</code>
+				<button class="example-runner" for="#when-example3">Compile</button>
+			</p>
+			<h1 class="main-heading">Interested Yet?</h1>
+			<p class="description-paragraph">
+				Now, GSS is still in the alpha phase of it's development, and I wouldn't recommend using it for production, but if you'd like to get a copy of 
+				the compiler, there are a number of ways you can go about doing that.  If you'd like to use the NodeJS module, and you already have Node installed,
+				you can simply open up your console, and type
+				<br>
+				npm install gss2css
+				<br>
+				into it.  A Python module is currently in development, which will be available in both pure-python, and C-extension flavors, and you'll be able to get that via pip.
+				There is also a windows '.exe' binary that you can use, available with the source code on github <a href="">here</a>
+			</p>
+		</div>
+	</body>
+</html>

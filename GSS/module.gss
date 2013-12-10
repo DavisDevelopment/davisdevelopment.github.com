@@ -1,0 +1,30 @@
+@color-for-body: shit-cocks;
+@color-for-heading: #222222;
+
+mixin border() { border: arguments[ 0 -> 3 ]; }
+mixin border-left() { border-left: arguments[ 0 -> 3 ]; }
+mixin border-right() { border-right: arguments[ 0 -> 3 ]; }
+mixin shadow() { ~box-shadow: arguments; }
+mixin border-radius( @radius ) {
+	~border-radius: @radius;
+}
+
+mixin contentWrapper {
+	width: 960px;
+	min-height: 1000px;
+}
+
+mixin myWrapper extends contentWrapper {
+	border-left( solid, black, 2px );
+	border-right( solid, black, 2px );
+}
+
+mixin textCenter {
+	text-align: center;
+}
+
+mixin blockCenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
