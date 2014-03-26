@@ -1,0 +1,120 @@
+<!-- Template File -->
+<div id="ui-temp-home" class='template'>
+	<div id="home-stats">
+		<h1 id='home-stats' class='gui-heading'>Stats</h1>
+		<div id='stat-table' class='gui-table'>
+			<span class='gui-table-header'>Money</span>
+			<div class='gui-table-entry'>
+				<span class='gui-table-key'>Bank Balance</span>
+				<span class='gui-table-value'>{{ player.money.bank.displayBalance() }}</span>
+			</div>
+			<br>
+			<div class='gui-table-entry'>
+				<span class='gui-table-key'>Pocket Money</span>
+				<span class='gui-table-value'>{{ player.money.pocket.displayBalance() }}</span>
+			</div>
+			<br>
+			<div class='gui-table-entry'>
+				<span class='gui-table-key'>Total Balance</span>
+				<span class='gui-table-value'>{{ player.displayTotalBalance() }}</span>
+			</div>
+			<br>
+			<span class='gui-table-header'>Income</span>
+			<br>
+			<div class='gui-table-entry'>
+				<span class='gui-table-key'>Daily Income</span>
+				<span class='gui-table-value'>{{ player.dailyIncome() }}</span>
+			</div>
+			<br>
+			<div class='gui-table-entry'>
+				<span class='gui-table-key'>Weekly Income</span>
+				<span class='gui-table-value'>{{ player.weeklyIncome() }}</span>
+			</div>
+		</div>
+	</div>
+	<div id="home-actions">
+		<h1 class='gui-heading'>Things To Do</h1>
+		<div>
+			<h1>I'm a list of things to do</h1>
+		</div>
+	</div>
+</div>
+
+<div id="ui-temp-company" class='template'>
+	<div class='gui-page'>
+		<h1>{{ name }}</h1>
+		<div class='gui-bar-left'>
+			<div id="stock-chart"></div>
+			<p class='gui-paragraph'>
+				{{ description }}
+			</p>
+		</div>
+		<div class='gui-bar-right'>
+			<div id="stock-data" class='gui-table'>
+				<div class='gui-table-entry'>
+					<span class='gui-table-key'>Owned</span>
+					<span id='display-owned' class='gui-table-value'>fetching data..</span>
+				</div>
+				<br>
+				<div class='gui-table-entry'>
+					<span class='gui-table-key'>Total Payout</span>
+					<span id='display-payout' class='gui-table-value'>fetching data..</span>
+				</div>
+			</div>
+			<br><br>
+			<div id="stock-handle">
+				<button id="stock-purchase" data-icon="plus-dark">Buy</button>
+				<button id="stock-sell" data-icon="minus-dark">Sell</button>
+				<button id="stock-sellall">Sell All</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--
+<div id="ui-temp-company-mobile" class='template'>
+	<div class='gui-page'>
+		<h1>{{name}}</h1>
+		<div id='display' class='gui-bar-left'>
+			<h1>Stock Data</h1>
+			<div>
+				<div id="stock-chart"></div>
+				<p class='gui-paragraph'>
+					{{description}}
+				</p>
+			</div>
+		</div>
+		<div id='actions' class='gui-bar-right'>
+			<h1>Actions</h1>
+			<div>
+				<div id="stock-data" class='gui-table'>
+					<div class='gui-table-entry'>
+						<span class='gui-table-key'>Owned</span>
+						<span id='display-owned' class='gui-table-value'>{{call this "getOwned"}}</span>
+					</div>
+					<br>
+					<div class='gui-table-entry'>
+						<span class='gui-table-key'>Total Payout</span>
+						<span id='display-payout' class='gui-table-value'>{{call this "getPayout"}}</span>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div id="stock-handle">
+				<button id="stock-purchase" data-icon="plus-dark">Buy</button>
+				<button id="stock-sell" data-icon="minus-dark">Sell</button>
+				<button id="stock-sellall">Sell All</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="ui-temp-popup" class='template'>
+	<div class="gui-dialog">
+		<h1>{{title}}</h1>
+		<div class='gui-popup-content'></div>
+		{{#each buttons}}
+			<div id='button-{{name}}' class='gui-button'><span class='gui-button'>{{text}}</span></div>
+		{{/each}}
+	</div>
+</div>
+-->

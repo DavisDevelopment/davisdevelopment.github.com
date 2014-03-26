@@ -1,0 +1,87 @@
+@dark: #333;
+@light: #f9f9f9;
+@font-name: "Trebuchet MS" "Calibri" "Arial";
+body {
+	background-color: @light;
+	font-family: @font-name;
+	#main-wrapper {
+		position: relative;
+		left: -8px;
+		top: -8px;
+	}
+	#header {
+		width: 100%;
+		padding: 10px;
+		background-color: @dark;
+		div {
+			display: inline;
+		}
+	}
+	#menu-button {
+		background-color: @dark;
+		position: static;
+		top: 0px;
+		left: 0px;
+		cursor: pointer;
+		width: 50px;
+		border-radius: 5px;
+		img {
+			width: 50px;
+			height: 50px;
+		}
+	}
+	#mobile-console-button {
+		background-color: @dark;
+		position: static;
+		top: 0px;
+		left: 0px;
+		cursor: pointer;
+		width: 50px;
+		border-radius: 5px;
+		img {
+			width: 50px;
+			height: 50px;
+		}
+	}
+	#navbar {
+		position: absolute;
+		z-index: 5;
+		max-width: 500px;
+		min-width: 200px;
+		background-color: @dark;
+		color: white;
+		padding: 15px;
+		
+		a, input {
+			font-size: 31.9px;
+		}
+		div.gui-button {
+			background-color: @light;
+			color: black;
+			min-width: 200px;
+		}
+	}
+	#mobile-console {
+		position: absolute;
+		z-index: 5;
+		max-width: 500px;
+		min-width: 200px;
+		background-color: @light;
+		color: @dark;
+		padding: 15px;
+		font-size: 150%;
+		.console-primitive {
+			display: block;
+			border-bottom: solid @dark 1px;
+			padding: 5px;
+		}
+	}
+	#wrapper {
+		
+	}
+	.trading {
+		.trading-company-link {
+			cursor: pointer;
+		}
+	}
+}

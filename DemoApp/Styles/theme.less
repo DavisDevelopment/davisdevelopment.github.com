@@ -1,0 +1,118 @@
+@dark: #333;
+@light: #f9f9f9;
+@font-name: "Trebuchet MS" "Calibri" "Arial";
+
+div.gui-button {
+	cursor: pointer;
+	background-color: @dark;
+	color: @light;
+	padding: 10px;
+	margin: 5px;
+	margin-top: 10px;
+	
+	span.gui-button {
+		text-align: center;
+		font-size: 150%;
+	}
+	img {
+		width: 32px;
+		height: 32px;
+	}
+}
+.gui-input-text {
+	outline: 0px;
+	padding: 10px;
+	font-family: @font-name;
+	width: 100%;
+}
+.gui-dialog {
+	position: absolute;
+	z-index: 999;
+	background-color: white;
+	color: #333;
+	padding: 10px;
+	box-shadow: 0 0 5px 5px lighten( @dark, 15% );
+	
+	h1, h2, h3, h4, h5 {
+		text-align: center;
+	}
+}
+.gui-paragraph {
+	color: @dark;
+}
+.gui-well {
+	box-shadow: inset 0px 0px 5px 5px lighten( @dark, 10% );
+}
+.gui-page {
+	width: 100%;
+	height: 100%;
+	background-color: @light;
+	color: @dark;
+	
+	.gui-bar-left {
+		width: 40%;
+		height: 100%;
+		float: left;
+	}
+	.gui-bar-right {
+		float: right;
+		width: 40%;
+		height: 100%;
+	}
+}
+.gui-table {
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 500px;
+	max-width: 95%;
+	
+	.gui-table-header {
+		display: inline;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+	.gui-table-entry {
+		width: 100%;
+		margin: 2px;
+		padding: 2px;
+		border-bottom: solid black 1px;
+	}
+	.gui-table-key {
+		float: left;
+		display: inline;
+	}
+	.gui-table-value {
+		float: right;
+		display: inline;
+	}
+}
+
+.gui-heading {
+	width: 100%;
+	background-color: @dark;
+	color: lighten( @light, 10% );
+	padding: 10px;
+	text-align: center;
+}
+.gui-collapsible-wrapper {
+	overflow: hidden;
+	width: 100%;
+	
+	.gui-collapsible-handle {
+		cursor: pointer;
+	}
+}
+.gui-listview-wrapper {
+	
+}
+
+.gui-tip-panel {
+	position: absolute;
+	background-color: @dark;
+	color: @light;
+	opacity: 0.7;
+	padding: 30px;
+	font-size: 150%;
+}

@@ -1,0 +1,22 @@
+body #menu-button {
+  width: 100px;
+}
+body #menu-button img {
+  width: 100px;
+  height: 100px;
+}
+body #navbar .gui-button {
+  padding: 15px;
+}
+body .gui-popup h1 {
+  font-size: 400%;
+}
+body .gui-popup p {
+  font-size: 200%;
+}
+body .gui-button {
+  font-size: 200%;
+}
+body .ui-btn {
+  font-size: 200%;
+}

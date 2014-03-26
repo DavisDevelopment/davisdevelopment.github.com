@@ -1,0 +1,108 @@
+div.gui-button {
+  cursor: pointer;
+  background-color: #333333;
+  color: #f9f9f9;
+  padding: 10px;
+  margin: 5px;
+  margin-top: 10px;
+}
+div.gui-button span.gui-button {
+  text-align: center;
+  font-size: 150%;
+}
+div.gui-button img {
+  width: 32px;
+  height: 32px;
+}
+.gui-input-text {
+  outline: 0px;
+  padding: 10px;
+  font-family: "Trebuchet MS" "Calibri" "Arial";
+  width: 100%;
+}
+.gui-dialog {
+  position: absolute;
+  z-index: 999;
+  background-color: white;
+  color: #333;
+  padding: 10px;
+  box-shadow: 0 0 5px 5px #595959;
+}
+.gui-dialog h1,
+.gui-dialog h2,
+.gui-dialog h3,
+.gui-dialog h4,
+.gui-dialog h5 {
+  text-align: center;
+}
+.gui-paragraph {
+  color: #333333;
+}
+.gui-well {
+  box-shadow: inset 0px 0px 5px 5px #4d4d4d;
+}
+.gui-page {
+  width: 100%;
+  height: 100%;
+  background-color: #f9f9f9;
+  color: #333333;
+}
+.gui-page .gui-bar-left {
+  width: 40%;
+  height: 100%;
+  float: left;
+}
+.gui-page .gui-bar-right {
+  float: right;
+  width: 40%;
+  height: 100%;
+}
+.gui-table {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 500px;
+  max-width: 95%;
+}
+.gui-table .gui-table-header {
+  display: inline;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.gui-table .gui-table-entry {
+  width: 100%;
+  margin: 2px;
+  padding: 2px;
+  border-bottom: solid black 1px;
+}
+.gui-table .gui-table-key {
+  float: left;
+  display: inline;
+}
+.gui-table .gui-table-value {
+  float: right;
+  display: inline;
+}
+.gui-heading {
+  width: 100%;
+  background-color: #333333;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+}
+.gui-collapsible-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.gui-collapsible-wrapper .gui-collapsible-handle {
+  cursor: pointer;
+}
+.gui-tip-panel {
+  position: absolute;
+  background-color: #333333;
+  color: #f9f9f9;
+  opacity: 0.7;
+  padding: 30px;
+  font-size: 150%;
+}

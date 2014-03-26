@@ -1,0 +1,79 @@
+body {
+  background-color: #f9f9f9;
+  font-family: "Trebuchet MS" "Calibri" "Arial";
+}
+body #main-wrapper {
+  position: relative;
+  left: -8px;
+  top: -8px;
+}
+body #header {
+  width: 100%;
+  padding: 10px;
+  background-color: #333333;
+}
+body #header div {
+  display: inline;
+}
+body #menu-button {
+  background-color: #333333;
+  position: static;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  width: 50px;
+  border-radius: 5px;
+}
+body #menu-button img {
+  width: 50px;
+  height: 50px;
+}
+body #mobile-console-button {
+  background-color: #333333;
+  position: static;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  width: 50px;
+  border-radius: 5px;
+}
+body #mobile-console-button img {
+  width: 50px;
+  height: 50px;
+}
+body #navbar {
+  position: absolute;
+  z-index: 5;
+  max-width: 500px;
+  min-width: 200px;
+  background-color: #333333;
+  color: white;
+  padding: 15px;
+}
+body #navbar a,
+body #navbar input {
+  font-size: 31.9px;
+}
+body #navbar div.gui-button {
+  background-color: #f9f9f9;
+  color: black;
+  min-width: 200px;
+}
+body #mobile-console {
+  position: absolute;
+  z-index: 5;
+  max-width: 500px;
+  min-width: 200px;
+  background-color: #f9f9f9;
+  color: #333333;
+  padding: 15px;
+  font-size: 150%;
+}
+body #mobile-console .console-primitive {
+  display: block;
+  border-bottom: solid #333333 1px;
+  padding: 5px;
+}
+body .trading .trading-company-link {
+  cursor: pointer;
+}
